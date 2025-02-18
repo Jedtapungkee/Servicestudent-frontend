@@ -1,6 +1,6 @@
-import "./navbar.css";
 import { Link, useLocation } from "react-router-dom";
 import { FaUserCircle } from "react-icons/fa";
+import "./../styles/Navbar.css";
 
 const Navbar = () => {
   const location = useLocation(); // ตรวจสอบ path ปัจจุบัน
@@ -9,7 +9,7 @@ const Navbar = () => {
   return (
     <nav className="Nav">
       <h1 className="LOGO">JC University</h1>
-      <div className="container">
+      <div className="containers">
         <Link to="/" className={location.pathname === "/" ? "active" : ""}>
           หน้าหลัก
         </Link>

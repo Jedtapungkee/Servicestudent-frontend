@@ -1,0 +1,80 @@
+/* navbar.css */
+.Nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #6242ED; 
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .LOGO {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    align-items: center;
+  }
+
+  .LOGO::before {
+    content: "🎓";
+    margin-right: 8px;
+    font-size: 1.5rem;
+  }
+  
+  .container {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+  }
+  
+  .container a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    position: relative;
+    padding-bottom: 5px;
+    margin: 10px;
+  }
+  
+
+  
+  /* เพิ่มสไตล์ให้กับลิงก์ที่ถูกเลือก */
+  .container a.active {
+    font-weight: bold;
+  }
+  
+  .container a.active::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+  }
+/* ปุ่มเข้าสู่ระบบ */
+.login {
+    text-decoration: none;
+    color: white;
+    background: none;
+    padding: 8px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+    flex-shrink: 0; /* ป้องกันการบีบขนาดจนล้น */
+    margin-right: 30px;
+  }
+  
+  .login:hover {
+    transform: scale(1.1);
+  }
+  
+  /* ปรับขนาดไอคอน */
+  .login-icon {
+    font-size: 24px;
+    color: white;
+  }

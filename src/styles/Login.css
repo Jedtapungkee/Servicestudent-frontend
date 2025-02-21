@@ -1,0 +1,104 @@
+/* Login Page Layout */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+  }
+  
+  /* Login Box */
+  .login-box {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    width: 1200px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    height: 500px;
+  }
+  
+  /* Header */
+  .login-header h2 {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  
+  .bold-text {
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  /* Logo */
+  .logo {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .logo span {
+    font-weight: normal;
+  }
+  
+  /* Form */
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+  
+  .login-form label {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  
+  .login-form input {
+    padding: 12px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    width: 100%;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+  }
+  
+  /* Password Field */
+  .password-field {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  .password-field input {
+    flex: 1;
+    padding-right: 40px;
+  }
+  
+  .toggle-password {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+  }
+  
+  /* Button */
+  .login-button {
+    background-color: #ffb300;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 80%;
+    max-width: 300px;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+ }
+  
+  .login-button:hover {
+    background-color: #e09b00;
+  }
+  

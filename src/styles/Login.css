@@ -1,3 +1,21 @@
+/* สไตล์ลิงก์ทั่วไป */
+.link {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+/* สไตล์ลิงก์เมื่อเป็น active page */
+.active-link {
+  color: white;
+  text-decoration: underline; /* ขีดเส้นใต้ */
+  font-weight: bold;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
 /* Login Page Layout */
 .login-container {
     display: flex;
@@ -5,23 +23,24 @@
     align-items: center;
     height: 100vh;
     background-color: #f5f5f5;
+    margin-top: 10px;
   }
   
   /* Login Box */
   .login-box {
-    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    background: linear-gradient(135deg, #6142ED, #372687);
     padding: 40px;
     border-radius: 10px;
     text-align: center;
     color: white;
     width: 1200px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    height: 500px;
+    height: 600px;
   }
   
   /* Header */
   .login-header h2 {
-    font-size: 16px;
+    font-size: 25px;
     margin-bottom: 15px;
   }
   
@@ -32,12 +51,13 @@
   
   /* Logo */
   .logo {
-    font-size: 36px;
+    font-size: 70px;
     font-weight: bold;
     margin-bottom: 20px;
   }
   
   .logo span {
+    font-size: 60px;
     font-weight: normal;
   }
   
@@ -45,23 +65,38 @@
   .login-form {
     display: flex;
     flex-direction: column;
-    text-align: left;
-  }
-  
-  .login-form label {
-    font-size: 14px;
-    margin-bottom: 5px;
-  }
-  
-  .login-form input {
-    padding: 12px;
-    border-radius: 5px;
-    border: none;
-    font-size: 16px;
+    align-items: center;
+    justify-content: center;
     width: 100%;
-    margin-bottom: 15px;
-    box-sizing: border-box;
   }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 550px; /* กำหนดความกว้างสูงสุดของช่อง Input */
+    margin-bottom: 15px;
+    text-align: left; /* ให้ Label ชิดซ้าย */
+  }
+  
+  /* Label */
+.form-group label {
+  font-size: 20px;
+  margin-bottom: 5px;
+  color: #fff; /* ปรับสีตามดีไซน์ */
+}
+
+/* ช่อง Input */
+.form-group input {
+  padding: 12px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+  box-sizing: border-box;
+  width: 100%; /* เต็มความกว้างของ form-group */
+  max-width: 550px;
+  height: 60px;
+}
   
   /* Password Field */
   .password-field {
@@ -81,7 +116,6 @@
     cursor: pointer;
   }
   
-  /* Button */
   .login-button {
     background-color: #ffb300;
     color: white;
@@ -91,12 +125,11 @@
     border-radius: 5px;
     cursor: pointer;
     transition: 0.3s;
-    width: 80%;
+    width: 80%;      /* ความกว้างของปุ่มเป็น 80% */
     max-width: 300px;
-    margin-top: 20px;
-    justify-content: center;
-    align-items: center;
- }
+    margin-top: 30px;
+    align-self: center; /* ให้อยู่กึ่งกลาง */
+  }
   
   .login-button:hover {
     background-color: #e09b00;

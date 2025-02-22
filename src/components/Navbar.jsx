@@ -5,6 +5,7 @@ import "./../styles/Navbar.css";
 const Navbar = () => {
   const location = useLocation(); // ตรวจสอบ path ปัจจุบัน
   if(location.pathname === "/login") return null; // ถ้าอยู่ที่ path /login ให้ไม่แสดง Navbar
+  if(location.pathname === "/register") return null; // ถ้าอยู่ที่ path /register ให้ไม่แสดง Navbar
 
   return (
     <nav className="Nav">

@@ -1,0 +1,132 @@
+/* Container ใหญ่ของหน้า Register */
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* เต็มความสูงจอ */
+    background-color: #f5f5f5;
+    margin-top: 10px;
+  }
+  
+  /* กล่อง Register */
+  .register-box {
+    background: linear-gradient(135deg, #6142ED, #372687);
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    width: 1200px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    height: 600px;
+  }
+  
+  /* Header */
+  .register-header h2 {
+    font-size: 25px;
+    margin-bottom: 15px;
+  }
+  
+  /* ลิงก์ทั่วไป */
+  .link {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 0 5px;
+  }
+  
+  /* ลิงก์หน้าแอคทีฟ (มีเส้นใต้) */
+  .active-link {
+    color: white;
+    text-decoration: underline;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 0 5px;
+  }
+  
+  /* Logo */
+  .register-logo {
+    font-size: 70px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .register-logo span {
+    font-size: 60px;
+    font-weight: normal;
+  }
+  
+  /* ฟอร์มหลัก */
+  .register-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* จัดกึ่งกลางแนวนอน */
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  /* แบ่ง 2 คอลัมน์ */
+  .two-columns {
+    display: flex;
+    width: 100%;
+    max-width: 1000px; /* ความกว้างรวม */
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  /* คอลัมน์ซ้ายและขวา */
+  .left-column, .right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* เว้นช่องระหว่างฟิลด์ */
+    width: 45%;
+  }
+  
+  /* กลุ่มฟิลด์ */
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+  
+  .form-group label {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input,
+  .form-group select {
+    padding: 12px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    box-sizing: border-box;
+    width: 100%;
+  }
+  
+  /* ฟิลด์เต็มความกว้าง (รหัสผ่าน) */
+  .full-width {
+    width: 100%;
+    max-width: 1000px; /* ให้ตรงกับ two-columns */
+    margin-bottom: 20px;
+  }
+  
+  /* ปุ่มสมัครสมาชิก */
+  .register-button {
+    background-color: #ffb300;
+    color: white;
+    font-size: 16px;
+    padding: 12px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 40%;      /* ปรับความกว้างของปุ่ม */
+    max-width: 300px;
+    transition: 0.3s;
+  }
+  
+  .register-button:hover {
+    background-color: #e09b00;
+  }
+  

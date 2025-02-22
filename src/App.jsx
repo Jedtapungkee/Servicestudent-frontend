@@ -6,6 +6,7 @@ import Request from "./pages/Request";
 import Status from "./pages/Status";
 import Contact from "./pages/Contact";
 import Login from "./pages/Login";
+import Register from "./pages/Register"; // เพิ่ม import Register
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/status" element={<Status />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
     </Router>
   );

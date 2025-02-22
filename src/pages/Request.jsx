@@ -1,9 +1,11 @@
 import React from "react";
 import "./..//styles/Request.css"; // ไฟล์ CSS
+import { useNavigate } from "react-router-dom";
 
 const DownloadForms = () => {
-  const handleGoToUpload = () => {
-    alert("ตัวอย่าง: ไปยังหน้าอัปโหลดเอกสาร");
+  const navigate = useNavigate();
+  const handleGoToUpload = (e) => {
+    navigate("/upload");
   };
 
   return (

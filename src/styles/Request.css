@@ -28,7 +28,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* 2 คอลัมน์ */
     gap: 20px;
-    column-gap: 50px;
+    column-gap: 60px;
     margin: 30px;
     max-width: 900px; /* กำหนดความกว้างของกล่องทั้งหมด */
     width: 100%;

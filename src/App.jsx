@@ -7,6 +7,8 @@ import Status from "./pages/Status";
 import Contact from "./pages/Contact";
 import Login from "./pages/Login";
 import Register from "./pages/Register"; // เพิ่ม import Register
+import Upload from "./pages/Uploaddoc"; // เพิ่ม import Upload
+import Send from "./pages/Send"; // เพิ่ม import Send
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/upload" element={<Upload />} />
+        <Route path="/send" element={<Send />} />
       </Routes>
     </Router>
   );

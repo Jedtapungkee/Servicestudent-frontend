@@ -1,0 +1,97 @@
+
+  
+  .download-container {
+    width: 100%;
+    min-height: 650px;
+    background: linear-gradient(135deg, #7458F6, #443390);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+  }
+  
+  /* Header Section */
+  .header-section {
+    background: transparent;
+    width: 100%;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+  }
+  
+  .header-section h2 {
+    font-size: 40px;
+    font-weight: 600;
+  }
+  
+  .forms-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 คอลัมน์ */
+    gap: 20px;
+    column-gap: 50px;
+    margin: 30px;
+    max-width: 900px; /* กำหนดความกว้างของกล่องทั้งหมด */
+    width: 100%;
+    padding: 20px;
+  }
+  
+  /* รายการคำร้อง (ข้อความ + ปุ่ม Download) */
+  .form-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    width: 100%; /* ปรับขนาดเต็มคอลัมน์ */
+    height: 70px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 15px 20px;
+  }
+  
+  .form-item p {
+    font-size: 20px;
+    font-weight: 500;
+    color: #333;
+  }
+  
+  /* ปุ่ม Download */
+  .download-btn {
+    background-color: #ffb300;
+    border: none;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  .download-btn:hover {
+    background-color: #e09b00;
+  }
+  
+  /* ปุ่มไปหน้าอัปโหลด */
+  .upload-section {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    max-width: 800px;
+    margin: 40px auto 30px;
+  }
+  
+  .upload-btn {
+    background-color: #ffb300;
+    border: none;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  .upload-btn:hover {
+    background-color: #e09b00;
+  }
+  

@@ -9,6 +9,7 @@ import Login from "./pages/Login";
 import Register from "./pages/Register"; // เพิ่ม import Register
 import Upload from "./pages/Uploaddoc"; // เพิ่ม import Upload
 import Send from "./pages/Send"; // เพิ่ม import Send
+import "leaflet/dist/leaflet.css"; // เพิ่ม import leaflet.css
 
 function App() {
   return (

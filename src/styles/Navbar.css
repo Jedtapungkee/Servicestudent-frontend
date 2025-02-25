@@ -13,12 +13,16 @@
   }
   
   .LOGO {
+    display: flex; /* ใช้ flex ให้จัดกึ่งกลาง */
+    align-items: center; 
+    gap: 10px; /* ปรับช่องว่างถ้าจำเป็น */
     font-size: 20px;
     font-weight: bold;
     color: white;
-    display: flex;
-    align-items: center;
-  }
+    text-decoration: none; /* ลบเส้นขีดใต้ */
+    height: 100%; /* ให้ขนาดเต็ม navbar */
+}
+
 
   .LOGO::before {
     content: "🎓";

@@ -21,6 +21,7 @@ const Contact = () => {
       <div className="contact-content">
         {/* แผนที่ */}
         <div className="map-container">
+          
           <MapContainer center={[14.02396, 99.97741]} zoom={15} scrollWheelZoom={false} style={{ height: "400px", width: "600px" }}>
             <TileLayer
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

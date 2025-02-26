@@ -40,9 +40,13 @@ const Navbar = () => {
         <Link to="/contact" className={location.pathname === "/contact" ? "active" : ""}>
           ติดต่อเจ้าหน้าที่
         </Link>
+        <Link to ="/admin" className={location.pathname === "/admin" ? "active" : ""}>
+          สำหรับเจ้าหน้าที่
+          </Link>
         <div className="nav-underline" style={underlineStyle}></div>
       </div>
       <Link to="/login" className="login">
+
         <FaUserCircle className="login-icon" />
       </Link>
     </nav>

@@ -10,6 +10,7 @@ import Register from "./pages/Register"; // เพิ่ม import Register
 import Upload from "./pages/Uploaddoc"; // เพิ่ม import Upload
 import Send from "./pages/Send"; // เพิ่ม import Send
 import "leaflet/dist/leaflet.css"; // เพิ่ม import leaflet.css
+import AdminDashboard from "./pages/AdminDashboard";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/upload" element={<Upload />} />
         <Route path="/send" element={<Send />} />
+        <Route path="/admin" element={<AdminDashboard />} />
       </Routes>
     </Router>
   );

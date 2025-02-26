@@ -1,16 +1,31 @@
 import { Link, useLocation } from "react-router-dom";
 import { FaUserCircle } from "react-icons/fa";
+import { useEffect, useState, useRef } from "react";
 import "./../styles/Navbar.css";
 
 const Navbar = () => {
-  const location = useLocation(); // ตรวจสอบ path ปัจจุบัน
-  if (location.pathname === "/login") return null; // ถ้าอยู่ที่ path /login ให้ไม่แสดง Navbar
-  if (location.pathname === "/register") return null; // ถ้าอยู่ที่ path /register ให้ไม่แสดง Navbar
+  const location = useLocation();
+  const [underlineStyle, setUnderlineStyle] = useState({});
+  const navRef = useRef(null);
+
+  useEffect(() => {
+    // Set underline style
+    const activeLink = document.querySelector(".containers a.active");
+    if (activeLink && navRef.current) { 
+      const { offsetLeft, offsetWidth } = activeLink;
+      setUnderlineStyle({
+        left: offsetLeft + "px",
+        width: offsetWidth + "px",
+      });
+    }
+  }, [location.pathname]);
+
+  if (location.pathname === "/login" || location.pathname === "/register") return null;
 
   return (
     <nav className="Nav">
       <Link to="/" className="LOGO">JC University</Link>
-      <div className="containers">
+      <div className="containers" ref={navRef}>
         <Link to="/" className={location.pathname === "/" ? "active" : ""}>
           หน้าหลัก
         </Link>
@@ -25,9 +40,10 @@ const Navbar = () => {
         <Link to="/contact" className={location.pathname === "/contact" ? "active" : ""}>
           ติดต่อเจ้าหน้าที่
         </Link>
+        <div className="nav-underline" style={underlineStyle}></div>
       </div>
       <Link to="/login" className="login">
-        <FaUserCircle className="login-icon" /> {/* แสดงไอคอนแทนข้อความ */}
+        <FaUserCircle className="login-icon" />
       </Link>
     </nav>
   );

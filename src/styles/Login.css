@@ -1,20 +1,38 @@
-/* สไตล์ลิงก์ทั่วไป */
-.link {
-  color: white;
-  text-decoration: none;
+.nav-links {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  font-size: 18px;
   font-weight: bold;
-  cursor: pointer;
-  margin: 0 5px;
+  position: relative; /* ทำให้ nav-underline อ้างอิงตำแหน่งจากตรงนี้ */
 }
 
-/* สไตล์ลิงก์เมื่อเป็น active page */
-.active-link {
-  color: white;
-  text-decoration: underline; /* ขีดเส้นใต้ */
-  font-weight: bold;
-  cursor: pointer;
-  margin: 0 5px;
+.nav-links .link,
+.nav-links .active-link {
+  text-decoration: none;
+  color: #ddd; /* สีเทาเมื่อไม่ active */
+  padding: 5px 10px;
+  position: relative;
 }
+
+.nav-links .active-link {
+  color: #ffffff; /* สีขาวเมื่อ active */
+  font-weight: bold;
+}
+
+/* เส้นขีดใต้ */
+.nav-underline {
+  position: absolute;
+  bottom: -5px; /* อยู่ใต้ NavLink */
+  left: 0; /* เริ่มจากซ้ายสุด */
+  height: 3px;
+  width: 0;
+  background-color: #ffffff;
+  transition: all 0.3s ease-in-out;
+}
+
+
 
 /* Login Page Layout */
 .login-container {

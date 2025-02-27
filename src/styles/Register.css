@@ -25,24 +25,31 @@
     font-size: 25px;
     margin-bottom: 15px;
   }
+ 
   
-  /* ลิงก์ทั่วไป */
-  .link {
-    color: white;
+  .nav-links .link,
+  .nav-links .active-link {
     text-decoration: none;
-    font-weight: bold;
-    cursor: pointer;
-    margin: 0 5px;
+    color: #ddd; /* สีเทาเมื่อไม่ active */
+    padding: 5px 10px;
+    position: relative;
   }
   
-  /* ลิงก์หน้าแอคทีฟ (มีเส้นใต้) */
-  .active-link {
-    color: white;
-    text-decoration: underline;
+  .nav-links .active-link {
+    color: #ffffff; /* สีขาวเมื่อ active */
     font-weight: bold;
-    cursor: pointer;
-    margin: 0 5px;
   }
+  
+  /* เส้นขีดใต้ */
+  .nav-underline {
+    position: absolute;
+    bottom: -5px;
+    height: 3px;
+    width: 0;
+    background-color: #ffffff;
+    transition: all 0.3s ease-in-out;
+  }
+  
   
   /* Logo */
   .register-logo {

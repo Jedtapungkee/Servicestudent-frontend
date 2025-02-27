@@ -18,7 +18,22 @@ const AdminDashboard = () => {
     { id: 10, type: "ขออนุมัติลา", status: "pending", officer: "สมชาย หวังผล" },
   ]);
 
-  console.log("อัปเดตข้อมูล requests:", requests);
+  
+  // สร้าง State สำหรับจัดการการล็อกอิน
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [password, setPassword] = useState("");
+
+  // รหัสผ่านที่ถูกต้อง (สามารถเปลี่ยนเป็นดึงจาก Backend ได้)
+  const correctPassword = "admin123";
+
+  // ฟังก์ชันตรวจสอบรหัสผ่าน
+  const handleLogin = () => {
+    if (password === correctPassword) {
+      setIsAuthenticated(true); // อนุญาตให้เข้าถึงหน้า Admin
+    } else {
+      alert("รหัสผ่านไม่ถูกต้อง!"); // แจ้งเตือนเมื่อรหัสผิด
+    }
+  };
 
 
     // ตรวจสอบค่า requests ทุกครั้งที่มีการเปลี่ยนแปลง
@@ -45,6 +60,22 @@ const AdminDashboard = () => {
 
   return (
     <div className="admin-container">
+
+      {/* แสดง Modal ถ้ายังไม่ล็อกอิน */}
+      {!isAuthenticated && (
+        <div className="admin-login-modal">
+          <h2>เข้าสู่ระบบแอดมิน</h2>
+          <input
+            type="password"
+            placeholder="กรอกรหัสผ่าน"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <button onClick={handleLogin}>เข้าสู่ระบบ</button>
+        </div>
+      )}
+       {isAuthenticated && (
+        <>
       <aside className="sidebar">
         <h2>แผงควบคุมแอดมิน</h2>
         <ul>
@@ -95,6 +126,8 @@ const AdminDashboard = () => {
           </tbody>
         </table>
       </main>
+      </>
+       )}
     </div>
   );
 };

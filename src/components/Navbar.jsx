@@ -46,7 +46,6 @@ const Navbar = () => {
         <div className="nav-underline" style={underlineStyle}></div>
       </div>
       <Link to="/login" className="login">
-
         <FaUserCircle className="login-icon" />
       </Link>
     </nav>
